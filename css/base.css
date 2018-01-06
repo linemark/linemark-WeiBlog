@@ -1,0 +1,35 @@
+*{box-sizing: border-box;}
+body{
+  text-align: center;
+  margin:0;
+  border:none;
+  padding:0;
+  background:#DEF0D6;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+a{
+  text-decoration:none;
+  color:#7EC97E;
+}
+a:hover{color:#76BF62;}
+img{
+  vertical-align:middle;
+  height: 100%;width: 100%;
+}
+.clear:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.lf{float:left}
+.rt{float:right}
+.main{
+  margin:0 auto;
+}
+iframe{
+  width:100px;
+}

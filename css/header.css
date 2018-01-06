@@ -1,0 +1,96 @@
+.header{
+  color:#4D7943;
+  height:60px;
+  width: 100%;
+  background: #fff;
+  border-top:2px solid #76BF62;
+  box-shadow:0 0 2px 2px #C1EAB4;
+  overflow: hidden;
+  position: fixed;
+}
+.header .header-nav{width:1000px;height:100%;margin:0 auto;}
+.header .goIndex{width:150px;height:100%;padding-top:7px;}
+.header-nav .goIndex img{height:43px;width:130px;}
+.header .header-nav .user li{
+  float:left;
+  height:60px;
+  width:85px;
+}
+.header .header-nav .user li svg{
+  height:100%;
+  margin-right: 5px;
+}
+.header .header-nav .user li a{
+  line-height: 60px;
+  color:#4D7943;
+}
+.header .header-nav .user li a:hover{
+  color:#76BF62;
+}
+.header .header-nav .icon{
+  width: 1.5em; height: 1.5em;
+  vertical-align:center;
+  fill: currentColor;
+  overflow: hidden;
+}
+.header .header-nav .search{
+  height:60px;
+  width:220px;
+  padding-top:12px;
+  position: relative;
+  color:#4D7943;
+}
+.header .header-nav .search input{
+  padding:0 30px 0 10px;
+  width:220px;
+  height:35px;
+  border:1px solid transparent;
+  outline: none;
+  background: #F0F5ED;
+}
+.header .header-nav .search input:hover{
+  border:1px solid #79B46C;
+}
+.header .header-nav .search input:focus{
+  border:1px solid #79B46C;
+  background: #fff;
+}
+.header .header-nav .search svg{
+  position: absolute;
+  right: 5px;
+  top:18px;
+}
+.header .header-nav .search .icon:hover {
+  color:#79B46C;
+  cursor: pointer;
+}
+.header .header-nav .user-setting{
+  width:250px;
+  padding-left: 10px;
+}
+.header .header-nav .user-setting a{
+  color:#4D7943;
+}
+.header .header-nav .user-setting li a:hover{
+  color:#76BF62;
+}
+.header .header-nav .user-setting li{
+  width:30px;
+  float:left;
+  height:30px;
+  line-height: 30px;
+  margin:15px 0 0 10px;
+}
+.header .header-nav .user-setting li:nth-child(3){
+  width:150px;
+  padding-left: 10px;
+  margin-top: 15px;
+  height:30px;
+  border-left:1px solid #C4C4C4;
+}
+.header .header-nav .user-setting li svg{
+  height:100%;
+}
+.header .header-nav .user-setting li:nth-child(3) svg{
+  margin-right: 10px;
+}
