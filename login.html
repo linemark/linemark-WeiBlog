@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>welcome to WeiBlog</title>
+  <style>
+    .main{
+      width:100%;
+      height:100%;
+      overflow: hidden;
+      background: #89B979;
+    }
+    .login{
+      width:100%;
+      height:100%;
+      background:url("img/login/1.jpg") no-repeat;
+      z-index:8;
+    }
+    .login .login_input{
+      height:100%;
+      width:100%;
+    }
+    .login .login_input p{
+      font-weight:bolder;
+      font-size:73px;
+      color:#fff;
+      margin-bottom:30px;
+    }
+    .login .login_input input{
+      width:390px;
+      height:60px;
+      font-size: 18px;
+      margin-bottom: 10px;
+      outline: none;
+      border:none;
+      padding: 10px;
+    }
+    .login .login_input input:-ms-input-placeholder{
+      color:#286090;
+    }
+    .login .login_input input:first-child{
+      color:#4D7943;
+    }
+    .login .login_input input:last-child{
+      color:#fff;
+      background:#89B979;
+      font-weight: bold;
+    }
+    .green{
+      width:100%;
+      height:100%;
+      background: #89B979;
+    }
+    .blue{
+      width:100%;
+      height:100%;
+      background:#286090;
+      z-index: 10;
+    }
+    .yellow{
+      width:100%;
+      height:100%;
+      background: #F0AA64;
+    }
+    .signup{
+      width:100%;
+      height:100%;
+      background: #89B979;
+    }
+  </style>
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="main">
+  <div class="login">
+    <div class="login_input">
+      <p>WeiBlog.</p>
+      <input type="text" placeholder="请输入用户名"><br>
+      <input type="button" value="下一步">
+    </div>
+  </div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="yellow"></div>
+  <div class="signup"></div>
+  <ul></ul>
+</div>
+</body>
+</html>

@@ -22,10 +22,6 @@
 }
 .header .header-nav .user li a{
   line-height: 60px;
-  color:#4D7943;
-}
-.header .header-nav .user li a:hover{
-  color:#76BF62;
 }
 .header .header-nav .icon{
   width: 1.5em; height: 1.5em;
@@ -67,12 +63,6 @@
 .header .header-nav .user-setting{
   width:250px;
   padding-left: 10px;
-}
-.header .header-nav .user-setting a{
-  color:#4D7943;
-}
-.header .header-nav .user-setting li a:hover{
-  color:#76BF62;
 }
 .header .header-nav .user-setting li{
   width:30px;

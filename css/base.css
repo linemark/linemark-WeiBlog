@@ -11,10 +11,7 @@ p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
   padding:0;
   list-style:none;
 }
-a{
-  text-decoration:none;
-  color:#7EC97E;
-}
+a{text-decoration:none;color:#4D7943;}
 a:hover{color:#76BF62;}
 img{
   vertical-align:middle;
@@ -32,4 +29,14 @@ img{
 }
 iframe{
   width:100px;
+}
+.clearMargin{
+  height:1px;
+  width:1px;
+}
+nav{
+  background: rgba(255,255,255,0.4);
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }

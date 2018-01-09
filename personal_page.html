@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>个人主页</title>
+  <style>
+    .pCard{
+      width:900px;
+      border-radius:30px;
+      background: #fff;
+      margin:180px auto 0;
+      padding: 20px;
+    }
+    .pCard .face{
+      margin:-60px 0 0 40px;
+    }
+    .pCard .face .facePic{
+      height:140px;
+      width:140px;
+      border:3px solid #DEF0D6;
+      border-radius:50%;
+      margin:0 auto;
+    }
+    .pCard .face .facePic img{
+      height:100%;
+      width:100%;
+      border-radius: 50%;
+    }
+    .pCard .face ul{
+      background: #ECF6E7;
+      margin-top:20px;
+      border-radius: 10px;
+    }
+    .pCard .face ul li{
+      float:left;
+      margin:5px 20px;
+    }
+    .pCard .face ul li p{
+      color:#8FCD89;
+      font-size:8px;
+    }
+    .pCard .pDetail{
+      text-align: left;
+      margin:40px 40px 40px 20px;
+      width:480px;
+    }
+    .pCard .pDetail p:first-child{
+      color:#4D7943;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 20px;
+      padding-left:20px;
+    }
+    .pCard .pDetail p:nth-child(2){
+      color:#436739;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    .pCard .pDetail p:last-child{
+      color:#BFC6B9;
+      font-size:15px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+<div class="main">
+  <header id="header"></header>
+  <nav>
+    <div class="clearMargin"></div>
+    <div class="pCard">
+      <div class="face lf">
+        <div class="facePic">
+          <img src="img/index/biglogo.jpg">
+        </div>
+        <ul>
+          <li>
+            <a href="#">
+              <b>333</b>
+              <p>关注</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <b>444</b>
+              <p>粉丝</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <b>555</b>
+              <p>blog</p>
+            </a>
+          </li>
+          <b class="clear"></b>
+        </ul>
+      </div>
+      <div class="pDetail rt">
+        <p>UserName</p>
+        <p>
+          个人介绍：<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span>
+        </p>
+        <p>注册时间：<span>2017.1.8</span></p>
+      </div>
+      <b class="clear"></b>
+    </div>
+    <div class="blogBody">
+      <!--<div class="blogDetail">-->
+        <!--<div class="face lf">-->
+          <!--<a href="#">-->
+            <!--<div class="facePic">-->
+              <!--<img src="img/index/biglogo.jpg">-->
+            <!--</div>-->
+          <!--</a>-->
+        <!--</div>-->
+        <!--<div class="detail lf">-->
+          <!--<a>userName</a>-->
+          <!--<p>2017年1月8日 17:50</p>-->
+          <!--<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae blanditiis commodi doloribus dolorum earum enim fugit incidunt, minima nam necessitatibus neque odio optio quidem reprehenderit vero voluptate voluptates voluptatibus.</span>-->
+          <!--<div class="picList">-->
+            <!--<ul>-->
+              <!--<li>-->
+                <!--<img src="img/index/biglogo.jpg" alt="">-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<img src="img/index/biglogo.jpg" alt="">-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<img src="img/index/biglogo.jpg" alt="">-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<img src="img/index/biglogo.jpg" alt="">-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<img src="img/index/biglogo.jpg" alt="">-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<img src="img/index/biglogo.jpg" alt="">-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<img src="img/index/biglogo.jpg" alt="">-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<img src="img/index/biglogo.jpg" alt="">-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<img src="img/index/biglogo.jpg" alt="">-->
+              <!--</li>-->
+            <!--</ul>-->
+          <!--</div>-->
+          <!--<div class="btn">-->
+            <!--<ul>-->
+              <!--<li>-->
+                <!--<svg class="icon lf" aria-hidden="true">-->
+                  <!--<use xlink:href="#icon-shoucang1"></use>-->
+                <!--</svg>-->
+                <!--<a href="#">收藏</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<svg class="icon lf" aria-hidden="true">-->
+                  <!--<use xlink:href="#icon-pinglun"></use>-->
+                <!--</svg>-->
+                <!--<a href="#">评论</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<svg class="icon lf" aria-hidden="true">-->
+                  <!--<use xlink:href="#icon-zan"></use>-->
+                <!--</svg>-->
+                <!--<a href="#">点赞</a>-->
+              <!--</li>-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+    <div class="picBody">
+
+    </div>
+    <div class="follows"></div>
+    <div class="fans"></div>
+  </nav>
+  <footer id="footer"></footer>
+</div>
+
+<script src="icon-symbol/iconfont.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+</body>
+</html>

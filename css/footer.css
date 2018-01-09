@@ -1,0 +1,25 @@
+.footer{
+  width:100%;
+  background: #fff;
+}
+.footer>ul{
+  width:1000px;
+  margin:0 auto;
+}
+.footer>ul>li{
+  float:left;
+  margin:20px 0;
+  width:250px;
+}
+.footer>ul li ul li{
+  margin: 5px 0;
+  font-size: 13px;
+}
+.footer>ul li ul li:first-child{
+  font-size:15px;
+  color:#3B5D34;
+  font-weight: bold;
+}
+.footer img{
+  width:80px;
+}
