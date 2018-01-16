@@ -3,175 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>welcome to WeiBlog</title>
-  <style>
-    body{
-      height:100vh;
-      width:100vw;
-      z-index:-10;
-      overflow: hidden;
-    }
-    .main{
-      width:100vw;
-      height:500vh;
-      position: absolute;
-      top:0vh;
-    }
-    .login{
-      width:100%;
-      height:100vh;
-      position: absolute;
-      top:0;
-      left: 0;
-      overflow: hidden;
-    }
-    .login>img,.sign_up>img{
-      position: absolute;
-      width:100%;
-      height:100%;
-      top:0;
-      left:0;
-      z-index: -5;
-    }
-    .login .login_input{
-      width:100%;
-      margin-top:10%;
-    }
-    .login .login_input p{
-      font-weight:bolder;
-      font-size:5vw;
-      color:#fff;
-      margin-bottom:2%;
-    }
-    .login .login_input input{
-      width:20%;
-      height:7vh;
-      font-size: 18px;
-      margin-bottom:10px;
-      outline: none;
-      border:none;
-      padding: 10px;
-      border-radius:5px;
-    }
-    .login .login_input input:-ms-input-placeholder{
-      color:#286090;
-    }
-    .login .login_input input:first-child{
-      color:#fff;
-    }
-    .login .login_input input:last-child{
-      color:#fff;
-      background:#6A9D5A;
-      font-weight: bold;
-    }
-    .login .login_input input:last-child:hover{
-      background:#89B27C;
-      cursor: pointer;
-    }
-    .login .appstore{
-      margin:3% auto;
-      width:100%;
-    }
-    .login .appstore img{
-      width:10%;
-      border-radius: 10px;
-      margin:0 15px;
-    }
-    .login .toBlue{
-      background:#286090;
-      position: absolute;
-      bottom:0;
-      right: 0;
-      height: 5vh;
-      width: 100vw;
-      color:white;
-      font-size:3vh;
-      line-height:4vh;
-      padding-left: 60vw;
-      padding-top:1vh;
-    }
-    .login .toBlue:hover{cursor: pointer;}
-    .blue{
-      width:100%;
-      height:20%;
-      background:#286090;
-      z-index:14;
-      position: absolute;
-      top:100vh;
-      left: 0;
-    }
-    .green{
-      width:100%;
-      height:20%;
-      background: #89B979;
-      position: absolute;
-      top:200vh;
-      left: 0;
-    }
-    .yellow{
-      width:100%;
-      height:20%;
-      background: #F0AA64;
-      position: absolute;
-      top:300vh;
-      left: 0;
-    }
-    .sign_up{
-      width:100%;
-      height:100%;
-      background: #89B979;
-      position: absolute;
-      top:400vh;
-      left: 0;
-    }
-    .main>ul{
-      position: fixed;
-      left:5%;
-      top:40%;
-      z-index:15;
-      height:50%;
-    }
-    .main>ul>li{
-      height:1vw;
-      width:1vw;
-      margin:60% 0;
-      border:0.2vw solid #fff;
-      border-radius: 50%;
-    }
-    ul>li:hover{
-      background: #fff;
-      cursor: pointer;
-    }
-    .right_button{
-      position: fixed;
-      top:2%;
-      right:2%;
-      width:20vw;
-    }
-    .right_button input{
-      width:5vw;
-      height:3vw;
-      font-size: 1.2vw;
-      border:none;
-      border-radius:10px;
-    }
-    .right_button>input:first-child{
-      background: rgba(0,0,0,0.3);
-      color:#fff;
-      margin-right:2%;
-    }
-    .right_button>input:first-child:hover{
-      background: black;
-      cursor: pointer;
-    }
-    .right_button>input:last-child{
-      background: rgba(255,255,255,0.7);
-    }
-    .right_button>input:last-child:hover{
-      background: #fff;
-      cursor: pointer;
-    }
-  </style>
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <div class="main">
@@ -221,11 +54,23 @@
   </div>
 </div>
 <script>
-  var main=document.getElementsByClassName("main")[0];
-  var top=window.getComputedStyle(main).getPropertyValue("top");
-  console.log(top);
-  var top=getComputedStyle(main).height;
-  console.log(top);
+  document.addEventListener("mousewheel",function(e){
+    move(e);
+  });
+  function move(e){
+    const WAIT=3000,DURA=500;
+    let main=document.getElementsByClassName("main")[0];
+    let mainHeight=main.offsetHeight;
+    let mainTop=main.offsetTop;
+    console.log(mainTop,(-mainHeight*5));
+    if(mainTop>=-mainHeight*5&&mainTop<=0){
+      if(e.wheelDelta<0){
+        main.setAttribute("style","top:"+(mainTop-mainHeight/5)+'px');
+      }else{
+        main.setAttribute("style","top:"+(mainTop+mainHeight/5)+'px');
+      }
+    }
+  }
 </script>
 </body>
 </html>
