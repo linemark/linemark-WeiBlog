@@ -7,15 +7,16 @@
   <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+<script src="js/jquery.js"></script>
 <div class="main">
   <div class="login">
     <img src="img/login/1.jpg">
     <div class="login_input">
       <p>WeiBlog.</p>
       <input type="text" placeholder="请输入用户名">
-      <span></span><br>
+      <br>
       <input type="password" placeholder="请输入用户密码">
-      <span></span><br>
+      <h6></h6>
       <input type="button" value="登录">
     </div>
     <div class="appstore">
@@ -32,8 +33,8 @@
   <div class="green"></div>
   <div class="yellow"></div>
   <div class="sign_up">
+    <img src="img/login/2.jpg">
     <div class="sign_up_input">
-      <img src="img/login/2.jpg">
       <p>WeiBlog.</p>
       <input type="text" placeholder="请输入用户名"><span></span><br>
       <input type="text" placeholder="请输入昵称"><span></span><br>
@@ -41,8 +42,8 @@
       <input type="button" value="注册">
     </div>
   </div>
-  <ul>
-    <li></li>
+  <ul class="mainNav">
+    <li class="hover"></li>
     <li></li>
     <li></li>
     <li></li>
@@ -54,23 +55,45 @@
   </div>
 </div>
 <script>
-  document.addEventListener("mousewheel",function(e){
-    move(e);
-  });
-  function move(e){
-    const WAIT=3000,DURA=500;
-    let main=document.getElementsByClassName("main")[0];
-    let mainHeight=main.offsetHeight;
-    let mainTop=main.offsetTop;
-    console.log(mainTop,(-mainHeight*5));
-    if(mainTop>=-mainHeight*5&&mainTop<=0){
-      if(e.wheelDelta<0){
-        main.setAttribute("style","top:"+(mainTop-mainHeight/5)+'px');
-      }else{
-        main.setAttribute("style","top:"+(mainTop+mainHeight/5)+'px');
+  // 首页轮播效果
+  $(function(){
+    document.addEventListener("mousewheel",function(e){
+      mainMove(e.wheelDelta);
+    });
+    $(".mainNav").on("mouseover",function(e){
+      let $tar=$(e.target);
+      if($tar.is("li")){
+        mainMove($tar.index());
+      }
+    });
+    $(".toBlue").on("click",()=>{
+      mainMove(-120);
+    });
+    $(".right_button input:first-child").on("click",()=>{
+      mainMove(0);
+    });
+    $(".right_button input:last-child").on("click",()=>{
+      mainMove(4);
+    });
+    function mainMove(type){
+      let $main=$(".main");
+      let mainHeight=$main.height();
+      let mainTop=$main[0].offsetTop;
+      if(type<5&&type>-1){
+        var floor=-mainHeight/5*type;
+      }else if(type===-120){
+        var floor=(mainTop===-mainHeight/5*4?-mainHeight/5*4:mainTop-mainHeight/5);
+      }else if(type===120){
+          var floor=(mainTop===0?0:mainTop+mainHeight/5);
+      }
+      if(!$main.is(":animated")){
+        $main.stop(true).animate({top:floor+'px'},500,()=>{
+          let li=-floor*5/mainHeight;
+          $(".mainNav li").eq(li).addClass("hover").siblings().removeClass("hover");
+        });
       }
     }
-  }
+  });
 </script>
 </body>
 </html>
