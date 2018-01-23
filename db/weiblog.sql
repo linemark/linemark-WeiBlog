@@ -4,9 +4,9 @@ CREATE DATABASE weiblog CHARSET=UTF8;
 USE weiblog;
 CREATE TABLE wb_user(
   uid INT PRIMARY KEY AUTO_INCREMENT,
-  uname VARCHAR(32),
+  uname VARCHAR(32) DISTINCT,
   upwd VARCHAR(32),
-  email VARCHAR(64),
+  email VARCHAR(64) DISTINCT,
   phone VARCHAR(16),
   user_name VARCHAR(32),
   date_time BIGINT,
