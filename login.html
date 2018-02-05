@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>welcome to WeiBlog</title>
+  <link rel="icon" href="img/index/hand%20(1).png" type="image/x-icon"/>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/login.css">
   <style>
@@ -14,14 +15,16 @@
 <div class="main">
   <div class="login">
     <img src="img/login/1.jpg">
-    <div class="login_input">
+    <form class="login_input">
       <p>WeiBlog.</p>
-      <input type="text" placeholder="请输入用户名">
+      <input type="text" placeholder="请输入用户名或邮箱" name="uname">
       <br>
-      <input type="password" placeholder="请输入用户密码">
-      <h6>用户名或密码错误</h6>
+      <input type="password" placeholder="请输入用户密码" name="upwd">
+      <br>
+      <span></span>
+      <br>
       <input type="button" value="登录">
-    </div>
+    </form>
     <div class="appstore">
       <a href="http://apple.com/zh-cn" target="_blank"><img src="img/login/applestore.jpg"></a>
       <a href="http://www.baidu.com" target="_blank"><img src="img/login/googleplay.jpg"></a>
@@ -37,7 +40,7 @@
   <div class="yellow"></div>
   <div class="sign_up">
     <img src="img/login/2.jpg">
-    <div class="sign_up_input">
+    <form class="sign_up_input">
       <h1>WeiBlog.</h1>
       <p>Come for what you love.</p>
       <p>Stay for what you discover.</p>
@@ -51,7 +54,7 @@
       <span></span>
       <br>
       <input type="button" value="注册">
-    </div>
+    </form>
     <div class="appstore">
       <a href="http://apple.com/zh-cn" target="_blank"><img src="img/login/applestore.jpg"></a>
       <a href="http://www.baidu.com" target="_blank"><img src="img/login/googleplay.jpg"></a>
@@ -70,44 +73,6 @@
   </div>
 </div>
 <script>
-  //注册分页功能
-  $(function(){
-    let $sEmail=$(".sign_up input[name=email]");
-    let $sEmailTip=$sEmail.next("span");
-    let $sUname=$(".sign_up input[name=uname]");
-    let $sUnameTip=$sUname.next("span");
-    let $sUpwd=$(".sign_up input[name=upwd]");
-    let $sUpwdTip=$sUpwd.next("span");
-    let reg=/^[a-zA-Z0-9_]{8,12}$/;
-    $sEmail.on("focus",()=>{$sEmailTip.html("请输入正确的邮箱格式");});
-    $sEmail.on("blur",()=>{
-      let reg=/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
-      if(reg.test($sEmail.val())){
-        $.get("data/user/sign_up.php",$sEmail.serialize())
-        .then(data=>{
-          $sEmailTip.html(data.msg);
-        });
-      }else{
-        $sEmailTip.html("邮箱格式不正确！");
-      }
-    });
-    $sUname.on("focus",()=>{$sUnameTip.html("用户名为8-12位英文或数字");});
-    $sUname.on("blur",()=>{
-      if(reg.test($sUname.val())){
-        console.log(1);
-      }else{
-        $sUpwdTip.html("用户名格式不正确！");
-      }
-    });
-    $sUpwd.on("focus",()=>{$sUpwdTip.html("密码为8-12位英文或数字");});
-    $sUpwd.on("blur",()=>{
-      if(reg.test($sUpwd.val())){
-        console.log(1);
-      }else{
-        $sUpwdTip.html("密码格式不正确！");
-      }
-    });
-  });
 </script>
 </body>
 </html>

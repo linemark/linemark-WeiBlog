@@ -8,7 +8,7 @@ body{
   width:100vw;
   height:500vh;
   position: absolute;
-  top:-400vh;
+  top:0;
 }
 .login{
   width:100%;
@@ -46,9 +46,9 @@ body{
   padding: 10px;
   border-radius:5px;
 }
-.login .login_input h6{
-  color:#2E4824;
-  font-size: 1em;
+.login .login_input span{
+  color:#F0F7F0;
+  font-size: 0.8em;
 }
 .login .login_input input:last-child{
   color:#fff;
