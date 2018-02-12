@@ -10,7 +10,7 @@ CREATE TABLE wb_user(
   phone VARCHAR(16),
   user_name VARCHAR(32),
   date_time BIGINT,
-  face VARCHAR(128),
+  avatar VARCHAR(128),
   gender INT DEFAULT 0
 );
 CREATE TABLE user_following(
@@ -29,12 +29,14 @@ CREATE TABLE wb_blog(
   supporter VARCHAR(10000),
   collector VARCHAR(10000),
   uid INT,
+  publish_time BIGINT,
   FOREIGN KEY(uid) REFERENCES wb_user(uid)
 );
 CREATE TABLE wb_img(
   iid INT PRIMARY KEY AUTO_INCREMENT,
   img VARCHAR(64) NOT NULL,
   support VARCHAR(10000),
+  publish_time BIGINT,
   uid INT,
   bid INT,
   FOREIGN KEY(bid) REFERENCES wb_blog(bid),
